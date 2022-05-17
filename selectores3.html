@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores 3</title>
+    <style>
+        p{
+            color: salmon;
+        }
+        p::first-letter{
+            color: teal;/*Cambia solo la primera letra de cada p a color teal*/
+        }
+        p:hover{
+            color: skyblue;/*Indica que cuando se pase el mouse por encima cambie de color a skyblue*/
+        }
+        div p:nth-child(2){
+            color: violet;/*Indica que el segundo p que se encuentre dentro de un div tome el color violet*/
+        }
+
+        
+
+        p::before{
+            content: "👍"; /*Antes de cada p pone un emoji*/
+        }
+
+        p::after {
+            content: "🐺";/*Después de cada p pone un emoji*/
+        }
+
+        ::placeholder {
+            color: tomato; /*Cambia solo el color del placeholde*/
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p>
+        <p>Lo mejor</p>
+    </div>
+    <input type="text" placeholder="Name">
+</body>
+</html>
