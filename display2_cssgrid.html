@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        .container {
+            display: grid;
+            width: 400px;
+            height: 400px; /*Indicamos alto y ancho de nuestro grid*/
+            background: papayawhip;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /*Se indica que se dividira en 4 columnas*/
+            grid-template-rows: 1fr 1fr 1fr 1fr;/*Se indica que se dividira en 4 filas*/
+        }
+
+        .item {
+            background-color: pink;
+        }
+
+        .container .item:nth-child(1){/*Se indica que tome el primer item de nuestro container*/
+            grid-column: 1 / 2;/*Se indica que comienza en la linea uno y termina en la dos de las columnas*/
+        }
+
+        .container .item:nth-child(2){/*Se indica que tome el segundo item de nuestro container*/
+            grid-column: 2 / 3;/*Se indica que comienza en la linea dos y termina en la tres de las columnas*/
+            grid-row: 2 / 3;/*Se indica que comienza en la linea dos y termina en la tres de las filas*/
+        }
+
+        .container .item:nth-child(3){
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .container .item:nth-child(4){
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"><!--Se crea el contenedor para nuestro grid-->
+        <div class="item"></div><!--Se crea los items que iran por dentro de nuestro grid-->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

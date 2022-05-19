@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            display: flex; /*Indicamos el tippo de display que usaremos en el contenedor*/
+            background: papayawhip;
+            justify-content: center;/*Se centra los items de izquierda a derecha, cuando el flex-direction es row osea fila en caso de ser columna lo hace de arriba abajo*/
+            align-items: center;/*Se alinean los items de arriba a abajo cuando el flex-direction es row osea fila en caso de ser columna lo hace de izquierda a derecha*/
+            height: 200px;/*Alto del contenedor*/
+            flex-direction: column; /*la direccion que tendra el contenedor*/
+        }
+        .item {
+            width: 30px;
+            height: 30px;
+            background: purple;
+        }
+
+        .container .item:nth-child(2n+1){/*Con el 2n + 1 indicamos que se tomaran solo los items que esten en la posición impar*/
+            background: skyblue; /*Se indica que los items que esten dentro de un container se pintaran de skyblue*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><!-- Con este div creamos el contenedor para nuestro felxbox -->
+        <div class="item"></div><!-- Con este div creamos cada uno de los items que llevara por dentro el contenedor -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
